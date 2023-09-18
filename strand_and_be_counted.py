@@ -224,4 +224,4 @@ with open("{}/results.txt".format(opts.out), 'w') as o:
     o.write("\n\n")
     o.write("Recommend using --{} for HISAT2\n".format(best_ori))
     o.write("Recommend using -s {} for htseq-count\n".format(best_strand_indices[0]))
-print ("* All done! To get metrics and recommendations only, run grep '>>>' on this output file or check {}/results.txt".format(opts.out))
+print ("* All done! For results and recommendations, check {}/results.txt".format(opts.out))
