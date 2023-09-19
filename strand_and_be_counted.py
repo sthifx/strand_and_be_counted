@@ -223,5 +223,8 @@ with open("{}/results.txt".format(opts.out), 'w') as o:
     o.write(cdf.to_string())
     o.write("\n\n")
     o.write("Recommend using --{} for HISAT2\n".format(best_ori))
+    if best_ori == 'ff':
+        o.write(" * The ff orientation is quite rare/unusual. This could be genuine, or it could be that you have used the R1 or R2 read for both --r1 and --r2. Worth a check.\n")
     o.write("Recommend using -s {} for htseq-count\n".format(best_strand_indices[0]))
-print ("* All done! For results and recommendations, check {}/results.txt".format(opts.out))
+
+print ("* All done! For results and recommendations, see {}/results.txt".format(opts.out))
